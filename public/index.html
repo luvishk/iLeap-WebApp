@@ -1,0 +1,84 @@
+<html >
+
+<head>
+	<title>iLeap Private Academy</title>
+	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="features/services/controller.js"></script>
+</head>
+
+<body>
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<h1>ILeap Academy Private Limited</h1>
+		{{message}}
+		<table class="table">
+			<thread>
+				<tr>
+					<th>Student Details</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr>
+					<td>
+						<input class="form-control" ng-model="serviceClient.fname" placeholder="First Name"/>
+					</td>
+					<td>
+						<input class="form-control" ng-model="serviceClient.mname" placeholder="Middle Name"/>
+					</td>
+					<td>
+						<input class="form-control" ng-model="serviceClient.lname" placeholder="Last Name"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="form-control" ng-model="serviceClient.gender" placeholder="Gender"/>
+					</td>
+					<td>
+						<input class="form-control" ng-model="serviceClient.age" placeholder="Age"/>
+					</td>
+					<td>
+						<input class="form-control" ng-model="serviceClient.standard" placeholder="Standard"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="form-control" ng-model="serviceClient.schoolname" placeholder="School Name"/>
+					</td>
+				
+					<td>
+						<button class="btn btn-primary" ng-click="create()">Add</button>
+						<th>&nbsp;</th>
+					</td>
+				</tr>
+			</thread>
+			<tbody>
+				<tr ng-repeat="serviceClient in serviceClients">
+					<td>
+						{{serviceClient.fname}}
+						{{serviceClient.mname}}
+						{{serviceClient.lname}}
+					</td>
+					<td>
+						{{serviceClient.gender}}
+					</td>
+					<td>
+						{{serviceClient.age}}
+					</td>
+					<td>
+						{{serviceClient.standard}}
+					</td>
+					<td>
+						{{serviceClient.schoolname}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+</div>
+
+</body>
+
+</html>
+
+
